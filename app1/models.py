@@ -1,0 +1,113 @@
+from django.db import models
+from rest_framework.viewsets import ViewSet
+# Create your models here.
+
+class Livehealths(models.Model):
+    contryCode = models.IntegerField()
+    Mobail = models.BigIntegerField()
+    Email = models.EmailField()
+    designation = models.CharField(max_length = 50,null=True)
+    fullname = models.CharField(max_length = 100)
+    firstname = models.CharField(max_length = 100)
+    middleName = models.CharField(max_length = 100)
+    lastnaem = models.CharField(max_length = 100)
+    age = models.IntegerField()
+    gender = models.CharField(max_length = 100)
+    area = models.CharField(max_length = 100)
+    city = models.CharField(max_length = 100)
+    patientType = models.CharField(max_length = 100)
+    labPatientld = models.CharField(max_length = 100)
+    pincode = models.IntegerField()
+    patienid = models.IntegerField()
+    dob = models.DateField()
+    passPortNo = models.CharField(max_length = 100,null=True,)
+    panNumber = models.CharField(max_length = 50)
+    aadharNumber = models.BigIntegerField()
+    insuranceno = models.IntegerField(null=True)
+    nationality = models.CharField(max_length = 50, null=True)
+    ethnicity = models.CharField(max_length =50, null=True)
+    nationalidentitynumber = models.CharField(max_length = 100, null=True)
+    workerCode = models.CharField(max_length =100)
+    doctorCode = models.CharField(max_length = 100)
+    areaOfReside = models.CharField(max_length =100, null=True)
+    state = models.CharField(max_length = 100)
+    EmergencyFlag = models.IntegerField()
+    totalAmount = models.FloatField()
+    advance = models.FloatField()
+    billConcession = models.FloatField()
+    additionalAmount = models.FloatField()
+    billDate = models.DateTimeField()
+    paymentType = models.CharField(max_length = 40)
+    referralName = models.CharField(max_length = 100, null=True)
+    otherReferral = models.CharField(max_length = 100, null=True)
+    orderNumber = models.CharField(max_length = 100)
+    referralIdLH = models.IntegerField()
+    organisationName = models.CharField(max_length = 100, null=True)
+    additionalAmounts =models.FloatField()
+    organizationIdLH = models.IntegerField()
+    comments = models.CharField(max_length = 1000)
+    testID =models.IntegerField()
+    testCode = models.CharField(max_length = 100)
+    integrationCode = models.CharField(max_length = 100)
+    dictionaryId = models.IntegerField()
+    paymentType = models.CharField(max_length = 50)
+    paymentAmount =models.FloatField()
+    issueBank = models.CharField(max_length = 150, null=True)
+
+    def __str__(self):
+        return self.fullname
+    
+
+class Pationt_Register(models.Model):
+    ConntryCode = models.IntegerField()
+    Email = models.EmailField()
+    designation = models.CharField(max_length = 100)
+    fullname = models.CharField(max_length = 100)
+    age = models.IntegerField()
+    geneder = models.CharField(max_length = 100)
+    area = models.CharField(max_length  =100)
+    city =models.CharField(max_length = 100)
+    patient_type = models.CharField(max_length = 100)
+    pincode = models.IntegerField()
+    patientid = models.IntegerField()
+    dob = models.DateField()
+    passportno= models.CharField(max_length = 100)
+    pannumber = models.BigIntegerField()
+    addarnumber = models.BigIntegerField()
+    dectorecode =models.IntegerField()
+
+    def __str__(self):
+        return self.fullname
+    
+
+class Appointment(models.Model):
+    contryCode = models.IntegerField()
+    Mobail = models.BigIntegerField()
+    Email = models.EmailField()
+    designation = models.CharField(max_length = 50,null=True)
+    fullname = models.CharField(max_length = 100)
+    firstname = models.CharField(max_length = 100)
+    middleName = models.CharField(max_length = 100)
+    lastnaem = models.CharField(max_length = 100)
+    age = models.IntegerField()
+    gender = models.CharField(max_length = 100)
+    area = models.CharField(max_length = 100)
+    city = models.CharField(max_length = 100)
+    patientType = models.CharField(max_length = 100)
+    labPatientld = models.CharField(max_length = 100)
+    pincode = models.IntegerField()
+    patienid = models.IntegerField()
+    dob = models.DateField()
+    passPortNo = models.CharField(max_length = 100,null=True,)
+    panNumber = models.CharField(max_length = 50)
+    aadharNumber = models.BigIntegerField()
+    insuranceno = models.IntegerField(null=True)
+    Appointment= models.DateField()
+    startDate = models.DateTimeField()
+    endDate = models.DateField()
+    paymentType = models.CharField(max_length = 50)
+    paymentAmount =models.FloatField()
+
+    def __str__(self):
+        return self.labPatientld
+    
